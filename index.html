@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papelería El Estudiante · Tu mejor aliado escolar</title>
+    <style>
+        /* ============================================
+           ESTILOS GENERALES - Diseño profesional PyME
+           ============================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        /* ============================================
+           ENCABEZADO Y NAVEGACIÓN
+           ============================================ */
+        header {
+            background: linear-gradient(135deg, #1a5276, #2980b9);
+            color: white;
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .header-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #f1c40f;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        /* ============================================
+           SECCIÓN HERO
+           ============================================ */
+        .hero {
+            background: linear-gradient(135deg, #2980b9, #3498db);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #f1c40f;
+            color: #1a5276;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .btn:hover {
+            background: #f39c12;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        /* ============================================
+           SECCIÓN DE PRODUCTOS DESTACADOS
+           ============================================ */
+        .productos {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .productos h2 {
+            font-size: 36px;
+            color: #1a5276;
+            margin-bottom: 40px;
+        }
+
+        .productos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .producto-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .producto-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .producto-icono {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .producto-card h3 {
+            font-size: 22px;
+            color: #1a5276;
+            margin-bottom: 10px;
+        }
+
+        .producto-card p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .precio {
+            display: inline-block;
+            margin-top: 15px;
+            background: #27ae60;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* ============================================
+           SECCIÓN DE SERVICIOS
+           ============================================ */
+        .servicios {
+            background: white;
+            padding: 60px 20px;
+        }
+
+        .servicios h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #1a5276;
+            margin-bottom: 40px;
+        }
+
+        .servicios-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+        }
+
+        .servicio-item {
+            text-align: center;
+            padding: 25px;
+            border: 2px solid #eee;
+            border-radius: 10px;
+            transition: border-color 0.3s;
+        }
+
+        .servicio-item:hover {
+            border-color: #2980b9;
+        }
+
+        .servicio-item .icono {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .servicio-item h3 {
+            color: #1a5276;
+            margin-bottom: 10px;
+        }
+
+        /* ============================================
+           FORMULARIO DE CONTACTO (Google Forms embebido)
+           ============================================ */
+        .contacto {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .contacto h2 {
+            font-size: 36px;
+            color: #1a5276;
+            margin-bottom: 20px;
+        }
+
+        .contacto p {
+            margin-bottom: 30px;
+            color: #666;
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        iframe {
+            width: 100%;
+            height: 650px;
+            border: none;
+        }
+
+        /* ============================================
+           PIE DE PÁGINA
+           ============================================ */
+        footer {
+            background: #1a5276;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            opacity: 0.8;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 35px;
+            line-height: 60px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 999;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* ============================================
+           RESPONSIVE (Adaptable a celular)
+           ============================================ */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            .hero p {
+                font-size: 16px;
+            }
+            nav {
+                gap: 10px;
+                margin-top: 15px;
+                justify-content: center;
+            }
+            nav a {
+                padding: 6px 12px;
+                font-size: 14px;
+            }
+            .productos h2, .servicios h2, .contacto h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================
+         ENCABEZADO
+         ============================================ -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                📚 Papelería <span>El Estudiante</span>
+            </div>
+            <nav>
+                <a href="#inicio">Inicio</a>
+                <a href="#productos">Productos</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============================================
+         SECCIÓN HERO
+         ============================================ -->
+    <section class="hero" id="inicio">
+        <h1>Todo lo que necesitas para estudiar y crear</h1>
+        <p>Plumas, cuadernos, lápices, impresiones, engargolados y mucho más. Tenemos lo que buscas al mejor precio de la colonia.</p>
+        <a href="#contacto" class="btn">📞 Contáctanos Ahora</a>
+    </section>
+
+    <!-- ============================================
+         PRODUCTOS DESTACADOS
+         ============================================ -->
+    <section class="productos" id="productos">
+        <h2>🛒 Productos Más Vendidos</h2>
+        <div class="productos-grid">
+
+            <div class="producto-card">
+                <div class="producto-icono">📓</div>
+                <h3>Cuadernos Profesionales</h3>
+                <p>Rayados, cuadriculados y de dibujo. Todos los tamaños disponibles.</p>
+                <span class="precio">Desde $25 MXN</span>
+            </div>
+
+            <div class="producto-card">
+                <div class="producto-icono">🖊️</div>
+                <h3>Plumas y Bolígrafos</h3>
+                <p>Bic, PaperMate, Pilot y más. Cajas y menudeo.</p>
+                <span class="precio">Desde $5 MXN</span>
+            </div>
+
+            <div class="producto-card">
+                <div class="producto-icono">✏️</div>
+                <h3>Lápices y Colores</h3>
+                <p>Lápices #2, colores Prismacolor, Mapita y crayones.</p>
+                <span class="precio">Desde $8 MXN</span>
+            </div>
+
+            <div class="producto-card">
+                <div class="producto-icono">📐</div>
+                <h3>Juegos de Geometría</h3>
+                <p>Escuadras, compases, reglas y transportadores.</p>
+                <span class="precio">Desde $35 MXN</span>
+            </div>
+
+            <div class="producto-card">
+                <div class="producto-icono">🎨</div>
+                <h3>Material Didáctico</h3>
+                <p>Plastilina, acuarelas, pinceles, cartulinas y foami.</p>
+                <span class="precio">Desde $15 MXN</span>
+            </div>
+
+            <div class="producto-card">
+                <div class="producto-icono">💻</div>
+                <h3>Accesorios Tech</h3>
+                <p>USB, mouse, teclados, audífonos y fundas para laptop.</p>
+                <span class="precio">Desde $80 MXN</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============================================
+         SERVICIOS
+         ============================================ -->
+    <section class="servicios" id="servicios">
+        <h2>💼 Servicios que Ofrecemos</h2>
+        <div class="servicios-grid">
+
+            <div class="servicio-item">
+                <div class="icono">🖨️</div>
+                <h3>Impresiones</h3>
+                <p>Blanco y negro y color. Desde $2 MXN por hoja.</p>
+            </div>
+
+            <div class="servicio-item">
+                <div class="icono">📑</div>
+                <h3>Engargolados</h3>
+                <p>Profesionales, con pastas y arillos. Entrega rápida.</p>
+            </div>
+
+            <div class="servicio-item">
+                <div class="icono">📱</div>
+                <h3>Recargas Telefónicas</h3>
+                <p>Todas las compañías. Comisión justa.</p>
+            </div>
+
+            <div class="servicio-item">
+                <div class="icono">💡</div>
+                <h3>Pago de Servicios</h3>
+                <p>Luz, agua, internet, Megacable. Sin filas.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============================================
+         CONTACTO (Google Forms gratuito)
+         ============================================ -->
+    <section class="contacto" id="contacto">
+        <h2>📬 Contáctanos</h2>
+        <p>Déjanos tu mensaje y te respondemos en menos de 1 hora. O mándanos un WhatsApp al botón verde de abajo.</p>
+        <div class="form-container">
+            <!-- REEMPLAZA ESTE ENLACE CON TU PROPIO FORMULARIO DE GOOGLE -->
+            <iframe src="https://docs.google.com/forms/d/e/TU_FORM_ID/viewform?embedded=true" allowfullscreen>
+                Cargando formulario...
+            </iframe>
+        </div>
+    </section>
+
+    <!-- ============================================
+         BOTÓN FLOTANTE DE WHATSAPP
+         ============================================ -->
+    <a href="https://wa.me/5215551234567?text=Hola%20Papeler%C3%ADa%20El%20Estudiante%2C%20quiero%20informaci%C3%B3n" target="_blank" class="whatsapp-float" title="Chatea con nosotros por WhatsApp">
+        💬
+    </a>
+
+    <!-- ============================================
+         PIE DE PÁGINA
+         ============================================ -->
+    <footer>
+        <p><strong>📚 Papelería El Estudiante</strong></p>
+        <p>📍 Dirección: Calle del Saber #123, Colonia Centro, CDMX</p>
+        <p>📞 Teléfono: 55-1234-5678 | ⏰ Lun-Sáb: 8:00 AM - 9:00 PM</p>
+        <p style="margin-top: 10px;">© 2026 Papelería El Estudiante · Todos los derechos reservados · Hecho con 💙 y $0 MXN</p>
+    </footer>
+
+</body>
+</html>
