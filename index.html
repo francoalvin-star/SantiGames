@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SantiGames · Tu mejor aliado escolar y gamer</title>
+    <title>SantiGames · Abarrotes y Papelería en Tres Valles, Veracruz</title>
     <style>
         /* ============================================
            ESTILOS GENERALES - SantiGames
@@ -202,6 +202,69 @@
             border-radius: 20px;
             font-size: 11px;
             margin-top: 8px;
+        }
+
+        /* ============================================
+           SECCIÓN PRODUCTOS DESTACADOS
+           ============================================ */
+        .productos {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .productos h2 {
+            font-size: 36px;
+            color: #6a0dad;
+            margin-bottom: 40px;
+        }
+
+        .productos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .producto-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 5px solid #6a0dad;
+        }
+
+        .producto-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .producto-icono {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .producto-card h3 {
+            font-size: 22px;
+            color: #6a0dad;
+            margin-bottom: 10px;
+        }
+
+        .producto-card p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .precio {
+            display: inline-block;
+            margin-top: 15px;
+            background: #27ae60;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 16px;
         }
 
         /* ============================================
@@ -755,7 +818,8 @@
          ============================================ -->
     <section class="hero" id="inicio">
         <h1>🎮 Bienvenido a <span>Santi</span>Games</h1>
-        <p>Tu papelería de confianza con todo lo que necesitas para la escuela, la oficina y el gaming. Plumas, cuadernos, impresiones, recargas y mucho más.</p>
+        <p>Tu tienda de abarrotes y papelería de confianza. Todo lo que necesitas para la escuela y la despensa. ¡Frente a la Escuela Primaria José María Martínez Rodríguez!</p>
+        <p style="margin-bottom: 20px; font-size: 18px;">📍 Blvd. Morelos y Pavón #7, Col. Adolfo Ruiz Cortinez, Tres Valles, Veracruz</p>
         <a href="#packs" class="btn">🎁 Ver Packs con Descuento</a>
     </section>
 
@@ -763,7 +827,7 @@
          TOP 10 DE LA SEMANA
          ============================================ -->
     <section class="top10" id="top10">
-        <h2>🔥 Top 10 de la Semana</h2>
+        <h2>🔥 Top 5 de la Semana</h2>
         <p class="top10-subtitle">Lo que todos están comprando. Actualizado cada lunes.</p>
         <div class="top10-grid">
             <div class="top10-item">
@@ -781,22 +845,73 @@
             </div>
             <div class="top10-item">
                 <div class="top10-ranking">3</div>
+                <span class="top10-icono">🥛</span>
+                <h4>Leche Lala Entera</h4>
+                <div class="top10-precio">$28 MXN</div>
+            </div>
+            <div class="top10-item">
+                <div class="top10-ranking">4</div>
+                <span class="top10-icono">🍞</span>
+                <h4>Pan Bimbo Blanco</h4>
+                <div class="top10-precio">$45 MXN</div>
+            </div>
+            <div class="top10-item">
+                <div class="top10-ranking">5</div>
                 <span class="top10-icono">🎮</span>
                 <h4>Mousepad Gamer</h4>
                 <div class="top10-precio">$150 MXN</div>
                 <div class="top10-badge">🔥 Trending</div>
             </div>
-            <div class="top10-item">
-                <div class="top10-ranking">4</div>
-                <span class="top10-icono">✏️</span>
-                <h4>Lápices Mirado</h4>
-                <div class="top10-precio">$8 MXN</div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         PRODUCTOS DESTACADOS (ABARROTES + PAPELERÍA)
+         ============================================ -->
+    <section class="productos" id="productos">
+        <h2>🛒 Abarrotes y Papelería</h2>
+        
+        <h3 style="color: #6a0dad; margin: 30px 0 20px;">🥫 Abarrotes</h3>
+        <div class="productos-grid">
+            <div class="producto-card">
+                <div class="producto-icono">🥛</div>
+                <h3>Leche y Lácteos</h3>
+                <p>Leche Lala, crema, yogurt, quesos frescos.</p>
+                <span class="precio">Desde $22 MXN</span>
             </div>
-            <div class="top10-item">
-                <div class="top10-ranking">5</div>
-                <span class="top10-icono">🎨</span>
-                <h4>Colores Prismacolor</h4>
-                <div class="top10-precio">$65 MXN</div>
+            <div class="producto-card">
+                <div class="producto-icono">🍞</div>
+                <h3>Pan y Bollería</h3>
+                <p>Bimbo, Marinela, Gamesa, pan de caja.</p>
+                <span class="precio">Desde $15 MXN</span>
+            </div>
+            <div class="producto-card">
+                <div class="producto-icono">🥤</div>
+                <h3>Refrescos y Agua</h3>
+                <p>Coca-Cola, Pepsi, Bonafont, jugos Jumex.</p>
+                <span class="precio">Desde $12 MXN</span>
+            </div>
+        </div>
+
+        <h3 style="color: #6a0dad; margin: 40px 0 20px;">📚 Papelería</h3>
+        <div class="productos-grid">
+            <div class="producto-card">
+                <div class="producto-icono">📓</div>
+                <h3>Cuadernos Profesionales</h3>
+                <p>Rayados, cuadriculados y de dibujo. Todos los tamaños.</p>
+                <span class="precio">Desde $25 MXN</span>
+            </div>
+            <div class="producto-card">
+                <div class="producto-icono">🖊️</div>
+                <h3>Plumas y Bolígrafos</h3>
+                <p>Bic, PaperMate, Pilot y más. Cajas y menudeo.</p>
+                <span class="precio">Desde $5 MXN</span>
+            </div>
+            <div class="producto-card">
+                <div class="producto-icono">✏️</div>
+                <h3>Lápices y Colores</h3>
+                <p>Lápices #2, colores Prismacolor, Mapita y crayones.</p>
+                <span class="precio">Desde $8 MXN</span>
             </div>
         </div>
     </section>
@@ -822,7 +937,7 @@
                         <li>1 Borrador + 1 Sacapuntas</li>
                         <li>1 Caja de colores (12 piezas)</li>
                     </ul>
-                    <a href="https://wa.me/5215551234567?text=Hola%20SantiGames%2C%20quiero%20el%20Pack%20Escolar%20B%C3%A1sico%20de%20%2485%20MXN" target="_blank" class="btn-pack">📞 Pedir por WhatsApp</a>
+                    <a href="https://wa.me/522881510010?text=Hola%20SantiGames%2C%20quiero%20el%20Pack%20Escolar%20B%C3%A1sico%20de%20%2485%20MXN" target="_blank" class="btn-pack">📞 Pedir por WhatsApp</a>
                 </div>
             </div>
             <div class="pack-card pack-destacada">
@@ -841,7 +956,7 @@
                         <li>1 Set de marcadores punta fina (8 piezas)</li>
                         <li>1 Sticker sorpresa de regalo 🎁</li>
                     </ul>
-                    <a href="https://wa.me/5215551234567?text=Hola%20SantiGames%2C%20quiero%20el%20Pack%20Gamer%20Pro%20de%20%24180%20MXN" target="_blank" class="btn-pack">⚡ Quiero este (Oferta)</a>
+                    <a href="https://wa.me/522881510010?text=Hola%20SantiGames%2C%20quiero%20el%20Pack%20Gamer%20Pro%20de%20%24180%20MXN" target="_blank" class="btn-pack">⚡ Quiero este (Oferta)</a>
                 </div>
             </div>
             <div class="pack-card">
@@ -860,7 +975,7 @@
                         <li>2 Cartulinas (blanca y color)</li>
                         <li>1 Bolsa reutilizable de SantiGames 🛍️</li>
                     </ul>
-                    <a href="https://wa.me/5215551234567?text=Hola%20SantiGames%2C%20quiero%20el%20Pack%20Mam%C3%A1%20Salvadora%20de%20%24120%20MXN" target="_blank" class="btn-pack">📞 Pedir por WhatsApp</a>
+                    <a href="https://wa.me/522881510010?text=Hola%20SantiGames%2C%20quiero%20el%20Pack%20Mam%C3%A1%20Salvadora%20de%20%24120%20MXN" target="_blank" class="btn-pack">📞 Pedir por WhatsApp</a>
                 </div>
             </div>
         </div>
@@ -878,7 +993,7 @@
                 <div class="catalogo-badge">📋 MÁS COMPLETO</div>
                 <span class="catalogo-icono">📖</span>
                 <h3>Catálogo Completo de Productos</h3>
-                <p>Todos nuestros productos con precios actualizados. Ideal para tenerlo a la mano y consultar antes de venir.</p>
+                <p>Todos nuestros productos (abarrotes + papelería) con precios actualizados. Ideal para tenerlo a la mano.</p>
                 <a href="#" class="btn-catalogo" onclick="alert('📥 En la versión real, aquí se descargará un PDF con tu lista de precios actualizada.'); return false;">📥 Descargar PDF (Gratis)</a>
             </div>
             <div class="catalogo-card">
@@ -891,12 +1006,12 @@
                 <div class="catalogo-badge">🔥 ACTUALIZADO</div>
                 <span class="catalogo-icono">🏷️</span>
                 <h3>Ofertas y Packs del Mes</h3>
-                <p>Nuestros combos con descuento especial. Se actualiza cada mes. ¡No pagues de más por productos que puedes llevar en paquete!</p>
+                <p>Nuestros combos con descuento especial. Se actualiza cada mes. ¡Abarrotes + papelería en un solo lugar!</p>
                 <a href="#" class="btn-catalogo" onclick="alert('📥 En la versión real, aquí se descargará un PDF con las ofertas vigentes.'); return false;">📥 Descargar PDF (Gratis)</a>
             </div>
         </div>
         <div class="catalogo-testimonio">
-            <p>"Tengo el catálogo de SantiGames guardado en mi celular. Cuando mi hijo me pide algo de la escuela, checo el precio y paso a comprarlo en el camino. ¡Súper práctico!"</p>
+            <p>"Tengo el catálogo de SantiGames guardado en mi celular. Cuando mi hijo me pide algo de la escuela, checo el precio y paso a comprarlo al salir de la primaria. ¡Súper práctico!"</p>
             <p class="autor">— Sra. Lupita, mamá de 3</p>
         </div>
     </section>
@@ -909,7 +1024,7 @@
         <div class="testimonios-grid">
             <div class="testimonio-card">
                 <div class="testimonio-estrellas">★★★★★</div>
-                <p class="testimonio-texto">"SantiGames me salvó con los materiales de mi hijo. Son muy rápidos y tienen todo lo que piden en la escuela. ¡Ya no voy a otro lado!"</p>
+                <p class="testimonio-texto">"SantiGames me salvó con los materiales de mi hijo. Son muy rápidos y tienen todo lo que piden en la primaria. ¡Ya no voy a otro lado!"</p>
                 <div class="testimonio-autor">
                     <div class="testimonio-foto">L</div>
                     <div>
@@ -931,7 +1046,7 @@
             </div>
             <div class="testimonio-card">
                 <div class="testimonio-estrellas">★★★★★</div>
-                <p class="testimonio-texto">"Siempre tienen las recargas de Free Fire y Mobile Legends. Mis amigos y yo venimos cada semana. La mejor papelería gamer de la colonia."</p>
+                <p class="testimonio-texto">"Siempre tienen las recargas de Free Fire y Mobile Legends. Mis amigos y yo venimos cada semana. La mejor tienda de la colonia."</p>
                 <div class="testimonio-autor">
                     <div class="testimonio-foto">K</div>
                     <div>
@@ -949,6 +1064,11 @@
     <section class="servicios" id="servicios">
         <h2>💼 Servicios que Ofrecemos</h2>
         <div class="servicios-grid">
+            <div class="servicio-item">
+                <div class="icono">🛒</div>
+                <h3>Abarrotes</h3>
+                <p>Productos de la canasta básica. Leche, pan, refrescos y más.</p>
+            </div>
             <div class="servicio-item">
                 <div class="icono">🖨️</div>
                 <h3>Impresiones</h3>
@@ -993,15 +1113,16 @@
     <!-- ============================================
          BOTÓN FLOTANTE DE WHATSAPP
          ============================================ -->
-    <a href="https://wa.me/5215551234567?text=Hola%20SantiGames%2C%20quiero%20informaci%C3%B3n" target="_blank" class="whatsapp-float" title="Chatea con nosotros por WhatsApp">💬</a>
+    <a href="https://wa.me/522881510010?text=Hola%20SantiGames%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20informaci%C3%B3n" target="_blank" class="whatsapp-float" title="Chatea con nosotros por WhatsApp">💬</a>
 
     <!-- ============================================
          PIE DE PÁGINA
          ============================================ -->
     <footer>
-        <p><strong>🎮 SantiGames</strong></p>
-        <p>📍 Dirección: Calle del Joystick #456, Colonia Centro, CDMX</p>
-        <p>📞 Teléfono: 55-9876-5432 | ⏰ Lun-Sáb: 9:00 AM - 9:00 PM | Dom: 10:00 AM - 3:00 PM</p>
+        <p><strong>🎮 SantiGames · Abarrotes y Papelería</strong></p>
+        <p>📍 Dirección: Boulevard Morelos y Pavón #7, Col. Adolfo Ruiz Cortinez, Tres Valles, Veracruz</p>
+        <p>📞 Teléfono: 288-151-0010 | ⏰ Lun-Sáb: 8:00 AM - 9:00 PM | Dom: 9:00 AM - 3:00 PM</p>
+        <p style="margin-top: 5px;">🏫 Frente a la Escuela Primaria José María Martínez Rodríguez</p>
         <p style="margin-top: 10px;">© 2026 SantiGames · Todos los derechos reservados · Hecho con 💜 y $0 MXN</p>
     </footer>
 
